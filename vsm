@@ -1,0 +1,1 @@
+python3 ~/amid_projects/video-sub-manager/videoSubManager.py -t "$2" -n "$4" 

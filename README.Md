@@ -7,7 +7,7 @@ This program goes through given location and matches all videos name with their 
 4. make sure **vsm** file is executable by running `sudo chmod 755 /usr/bin/vsm`
 
 ## USAGE :
-vsm -t [] -n [] -e []
+vsm -t [ ] -n [ ] -e [ ]
 
 ### "-t" switch should be first one and it is required!
 -t: [target folder location]

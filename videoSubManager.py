@@ -14,7 +14,10 @@ parser.add_argument('-name', '-n',
 args = parser.parse_args()
 
 try:
-	target_folder = os.path.abspath(args.target)
+	if args.target is not None and args.target != "" and args.target != " ":
+		target_folder = os.path.abspath(args.target)
+	else:
+		raise Exception
 except Exception as e:
 	print('Target folder error!')
 	sys.exit()
@@ -41,7 +44,7 @@ for root, dirs, files in os.walk(target_folder):
 
 		result = re.search(pattern=r"\d{1,2}.{0,3}\d{0,2}", string=name)
 
-		if result:
+		if result is not None:
 			numbers_list = re.findall(pattern=r"\d{1,2}", string=result.group())
 			if len(numbers_list) == 1:
 				s_num = season_number

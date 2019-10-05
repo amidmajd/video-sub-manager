@@ -34,9 +34,9 @@ for root, dirs, files in os.walk(target_folder):
 		result = re.search(pattern=r"(S|s)\d+(e|E)\d+", string=name)
 		if result:
 			found = result.group()
-			print(found)
+			# print(found)
 			old_path = os.path.join(abs_base_path, root, name)
 			new_name = fname + found.upper() + os.path.splitext(name)[1]
 			new_path = os.path.join(abs_base_path, root, new_name)
-			print(new_path)
-			# os.system("mv '{}' '{}'".format(old_path, new_path))
+			# print(new_path)
+			os.system("mv '{}' '{}'".format(old_path, new_path))

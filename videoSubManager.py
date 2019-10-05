@@ -10,7 +10,6 @@ parser.add_argument('-target', '-t',
 					required=True)
 parser.add_argument('-name', '-n',
 					help="Name of the series (for naming files) (taking base folder name as default)",
-					default=os.path.basename(os.path.abspath(''))
 					)
 args = parser.parse_args()
 
@@ -21,7 +20,10 @@ except Exception as e:
 	sys.exit()
 
 try:
-	fname = args.name
+	if args.name is not None:
+		fname = args.name
+	else:
+		fname = os.path.basename(target_folder)
 except Exception as e:
 	print('Name Error!')
 	sys.exit()
@@ -32,7 +34,9 @@ for root, dirs, files in os.walk(target_folder):
 		result = re.search(pattern=r"(S|s)\d+(e|E)\d+", string=name)
 		if result:
 			found = result.group()
+			print(found)
 			old_path = os.path.join(abs_base_path, root, name)
-			new_name = fname + found + os.path.splitext(name)[1]
+			new_name = fname + found.upper() + os.path.splitext(name)[1]
 			new_path = os.path.join(abs_base_path, root, new_name)
-			os.system("mv '{}' '{}'".format(old_path, new_path))
+			print(new_path)
+			# os.system("mv '{}' '{}'".format(old_path, new_path))

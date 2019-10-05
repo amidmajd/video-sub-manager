@@ -20,7 +20,7 @@ except Exception as e:
 	sys.exit()
 
 try:
-	if args.name is not None:
+	if args.name is not None and args.name != "" and args.name != " ":
 		fname = args.name
 	else:
 		fname = os.path.basename(target_folder)

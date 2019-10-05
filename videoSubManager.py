@@ -62,4 +62,8 @@ for root, dirs, files in os.walk(target_folder):
 			new_path = os.path.join(abs_base_path, root, new_name)
 			# print(old_path)
 			# print(new_path)
-			os.system("mv '{}' '{}'".format(old_path, new_path))
+			if old_path != new_path:
+				os.system("mv '{}' '{}'".format(old_path, new_path))
+			else:
+				pass
+print("Done!")

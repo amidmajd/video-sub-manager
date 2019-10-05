@@ -1,1 +1,20 @@
-python3 ~/amid_projects/video-sub-manager/videoSubManager.py -t "$2" -n "$4" 
+#!/bin/bash
+
+if [ "$1" == "-t" ]; then
+	if [ "$3" == "-n" ]; then
+		T="$2"
+		N="$4"
+		E="$6"
+    fi
+fi
+
+if [ "$1" == "-t" ]; then
+    if [ "$3" == "-e" ]; then
+		T="$2"
+		N="$6"
+		E="$4"
+    fi
+fi
+
+
+python3 ~/amid_projects/video-sub-manager/videoSubManager.py -t "$T" -n "$N" -e "$E"

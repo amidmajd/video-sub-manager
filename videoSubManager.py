@@ -49,7 +49,8 @@ for root, dirs, files in os.walk(target_folder):
 			elif len(numbers_list) == 2:
 				s_num, e_num = numbers_list
 			else:
-				print("????ERRRRRRRRRRRROR?????")
+				print("????UNKOWN ERRRRRRRRRRRROR?????")
+				sys.exit()
 			s_num, e_num = s_num.zfill(2), e_num.zfill(2)
 
 

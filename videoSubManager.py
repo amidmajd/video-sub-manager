@@ -40,7 +40,8 @@ except Exception as e:
 try:
 	if args.exclude is not None and args.exclude != "" and args.exclude != " ":
 		excludes = args.exclude.split(', ')
-
+	else:
+		excludes = []
 except Exception as e:
 	print('Excludes Error!')
 	sys.exit()

@@ -1,3 +1,4 @@
+# Video Subtitle Manager
 This program goes through given location and matches all videos name with their subtitles and changes names to a simple clean name for that series
 
 ## Installation:

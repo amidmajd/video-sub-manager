@@ -1,5 +1,5 @@
 # Video Subtitle Manager
-This program goes through given location and matches all videos name with their subtitles and changes names to a simple clean name for that series
+This program goes through given location and matches all videos names with their subtitles and changes names to a simple clean name for that series
 
 ## Installation:
 1. Copy main python program file to any location u want.

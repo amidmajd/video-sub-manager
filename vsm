@@ -1,5 +1,6 @@
 #!/bin/bash
 
+main_address=~/amid_projects/video-sub-manager/videoSubManager.py
 T="$2"
 
 if [ "$1" == "-t" ]; then
@@ -17,4 +18,4 @@ if [ "$1" == "-t" ]; then
 fi
 
 
-python3 ~/amid_projects/video-sub-manager/videoSubManager.py -t "$T" -n "$N" -e "$E"
+python3 $main_address -t "$T" -n "$N" -e "$E"

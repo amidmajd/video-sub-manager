@@ -3,7 +3,7 @@ This program goes through given location and matches all videos names with their
 
 ## Installation:
 1. Copy main python program file to any location u want.
-2. Change **vsm** python file address (main_address variable) to the selected python file in step 1.
+2. Change **vsm** shell script file address (main_address variable) to the selected python file in step 1.
 3. Copy and Paste **vsm** file to /usr/bin/ 
 4. make sure **vsm** file is executable by running `sudo chmod 755 /usr/bin/vsm`
 

@@ -23,6 +23,7 @@ try:
 	else:
 		raise Exception
 except Exception as e:
+	parser.print_help()
 	print('Target folder error!')
 	sys.exit()
 
@@ -33,6 +34,7 @@ try:
 	else:
 		fname = os.path.basename(target_folder)
 except Exception as e:
+	parser.print_help()
 	print('Name Error!')
 	sys.exit()
 
@@ -43,6 +45,7 @@ try:
 	else:
 		excludes = []
 except Exception as e:
+	parser.print_help()
 	print('Excludes Error!')
 	sys.exit()
 
@@ -71,7 +74,7 @@ for root, dirs, files in os.walk(target_folder):
 				else:
 					print("????UNKOWN ERRRRRRRRRRRROR?????")
 					sys.exit()
-				s_num, e_num = s_num.zfill(2), e_num.zfill(2)
+				s_num, e_num = str(s_num).zfill(2), str(e_num).zfill(2)
 
 
 				old_path = os.path.join(abs_base_path, root, name)

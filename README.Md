@@ -16,4 +16,4 @@ vsm -t [ ] -n [ ] -e [ ]
 - -e: [exclude these folders from this program] ; format for multiple folders : -e "f1, f2, f3"
 
 
-### Make sure that ur series folders hierarchy is like  [Friends/Season1/...]
+### Make sure that ur series folders hierarchy is like [Friends/Season1/...]
